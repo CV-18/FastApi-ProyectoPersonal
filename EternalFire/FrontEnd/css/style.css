@@ -1,0 +1,115 @@
+/*Estilos que compartiran las diferentes archivos  */
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&family=Roboto:wght@300;400&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+nav{
+    background-color: #1a1a1a;
+    padding: 1rem;
+}
+
+/* Estilos para la pagina Rock */
+.page-rock h1, .page-rock h2 {
+    color: #ff8800; /* Naranja eléctrico para el Rock */
+    text-shadow: 2px 2px 5px rgba(255, 136, 0, 0.3);
+}
+
+.page-rock section {
+    border-left: 4px solid #ff8800;
+}
+
+
+
+
+/* Estilos para la pagina Death Metal */
+
+.page-deathMetal h1, .page-deathMetal h2 {
+    color: #b30000; /* Rojo sangre para el Death Metal */
+    text-shadow: 2px 2px 5px rgba(179, 0, 0, 0.4);
+}
+
+.page-deathMetal section {
+    border-left: 4px solid #b30000;
+}
+
+.page-deathMetal table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #1a1a1a;
+    color : #e0e0e0;
+}
+
+.page-deathMetal th,td {
+    padding:12px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+.page-deathMetal th {
+    background-color: #2e2e2e;
+    color: #b30000;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.page-deathMetal tr:hover {
+    background-color: #252525;
+    cursor: default;
+}
+
+.page-deathMetal td:first-child{
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Death Metal ToolTip */
+.page-deathMetal .tooltip-container {
+    position: relative;
+    cursor:crosshair;
+}
+
+.page-deathMetal .bandname{
+    border-bottom: 1px dotted #e0e0e0;
+}
+
+.page-deathMetal .tooltip-box {
+    /* Ocultar inicialmente */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Una aparición suave y elegante */
+
+    /* Posicionamiento */
+    position: absolute;
+    bottom: 100%; /* Lo coloca justo encima del nombre */
+    left: 50%;
+    transform: translateX(-50%); /* Centra el cuadro respecto al nombre */
+    z-index: 10; /* Asegura que flote POR ENCIMA de todo lo demás */
+
+    /* Estilo visual del cuadro */
+    background-color: #2e2e2e; /* Fondo gris oscuro */
+    color: #fff;
+    padding: 10px;
+    border: 2px solid #b30000; /* Borde rojo sangre */
+    border-radius: 4px;
+    width: 180px; /* Ancho fijo para que no se desmadre */
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.5); /* Sombra para dar profundidad */
+}
+
+.page-deathMetal .tooltip-box img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+    border: 1px solid #555;
+}
+
+.page-deathMetal .tooltip-container:hover .tooltip-box {
+    visibility: visible;
+    opacity: 1;
+    bottom: 120%; /* Mueve un poco hacia arriba al aparecer */
+}
